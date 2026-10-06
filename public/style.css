@@ -1,0 +1,133 @@
+:root {
+  --ink: #1b2430;
+  --ink-soft: #5a6472;
+  --paper: #f6f7f5;
+  --card: #ffffff;
+  --line: #dde1e3;
+  --accent: #2f6f5e;
+  --accent-soft: #e4efeb;
+  --warn: #b23b3b;
+  --warn-soft: #f7e6e6;
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.center-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 32px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.card h1 {
+  font-size: 1.3rem;
+  margin: 0 0 4px;
+}
+
+.card p.sub {
+  color: var(--ink-soft);
+  margin: 0 0 24px;
+  font-size: 0.9rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin: 16px 0 6px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background: var(--paper);
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 11px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #255c4d;
+}
+button:disabled {
+  background: #a7b3ae;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  margin-top: 14px;
+  padding: 10px 12px;
+  background: var(--warn-soft);
+  color: var(--warn);
+  border-radius: 6px;
+  font-size: 0.85rem;
+  display: none;
+}
+
+.error-msg.show {
+  display: block;
+}
+
+nav.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+nav.topbar a {
+  margin-right: 20px;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav.topbar a.active {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+main {
+  padding: 24px;
+  max-width: 960px;
+  margin: 0 auto;
+}
